@@ -8,7 +8,6 @@ using namespace std;
  * 2. Take input in that array
  * 3. Doubleup each value of Array
  */
-
 void takeInput(int arr[], int size){
     for (int i = 0; i < size; i++){
         cout << "Enter value at index " << i << " :";
@@ -60,6 +59,35 @@ bool isTargetPresent(int arr[], int target, int size){
 }
 
 
+/*
+TODO: 4
+    {1,0,0,1,0,1,0,0,1};
+    Count zeros and Ones
+!Aglorithn
+1.Take Variables
+    zeroCount
+    oneCount
+2. Run a loop on Array 
+if got: 0 then zeroCount++
+if got: 1 then oneCount++
+3. Print: zeroCount and oneCount
+*/
+void countZerosOnes(int arr[], int size){
+    int zeroCount = 0;
+    int oneCount = 0;
+    for (int i = 0; i < size; i++){
+        if(arr[i] == 1){
+            oneCount++;
+        }else if(arr[i] == 0){
+            zeroCount++;
+        }else{
+            cout << "Neither 0 nor 1 present in the Array" << endl;
+        }
+    }
+
+    cout << "zeroCount: " << zeroCount << endl;
+    cout << "oneCount:  " << oneCount << endl;
+}
 
 int main(){
 
@@ -84,6 +112,10 @@ int main(){
     //     cout << "Target value " << target << " is not present in Array" << endl;
     // }
 
+    // TODO: 4
+    // int arr[5] = {1, 0, 0, 1, 0};
+    // int arr[5] = {2,3,4,5,6};
+    // countZerosOnes(arr, 5);
     
     cout << "Program Completed !!" << endl;
     return 0;
